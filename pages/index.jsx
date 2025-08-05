@@ -115,7 +115,7 @@ export default function Home() {
             <div className="mb-8">
               <div className="inline-flex items-center space-x-2 bg-primary-600/20 backdrop-blur-sm border border-primary-600/30 rounded-full px-6 py-3 mb-8">
                 <Sparkles className="w-5 h-5 text-primary-400" />
-                <span className="text-primary-400 font-medium">Powered by AI</span>
+                <span className="text-primary-400 font-medium">Propulsé par l'IA</span>
               </div>
             </div>
 
@@ -349,7 +349,7 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/20 to-secondary-900/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-gray-900/30 to-black/40"></div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -500,7 +500,7 @@ export default function Home() {
 
         {/* CTA Final */}
         <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/20 to-secondary-900/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-gray-900/30 to-black/40"></div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="card-hover p-16 max-w-4xl mx-auto">
