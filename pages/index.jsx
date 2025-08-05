@@ -51,10 +51,7 @@ export default function Home() {
         duration: 2,
         ease: 'power2.out',
         snap: { textContent: 1 },
-        scrollTrigger: {
-          trigger: statsRef.current,
-          start: 'top 80%',
-        }
+        delay: 1.5 // Start after hero animations
       }
     )
 
@@ -193,7 +190,7 @@ export default function Home() {
                   Génération instantanée
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Notre IA DeepSeek génère votre site web complet en quelques secondes, 
+                  Notre IA génère votre site web complet en quelques secondes, 
                   adapté à votre secteur et vos besoins.
                 </p>
               </div>
