@@ -23,13 +23,10 @@ export default function PlanCard({ plan, isPopular = false, onSelect }) {
         <h3 className="text-2xl font-bold text-white mb-2">{planData.name}</h3>
         <div className="mb-4">
           <span className="text-5xl font-black text-gradient">{planData.price}</span>
+          <span className="text-gray-400 ml-1">€</span>
           {planData.price > 0 && (
-            <span className="text-gray-400 ml-1">€</span>
+            <span className="text-gray-400">/{planData.interval}</span>
           )}
-          {planData.price === 0 && (
-            <span className="text-gray-400 ml-1">Gratuit</span>
-          )}
-          <span className="text-gray-400">/{planData.interval}</span>
         </div>
         <p className="text-gray-400 text-sm">
           {planData.price === 0 ? 'Parfait pour commencer' : 'Facturation mensuelle'}
