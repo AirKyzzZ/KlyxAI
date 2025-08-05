@@ -1,4 +1,4 @@
-import { Check, X, Crown, Zap, Rocket } from 'lucide-react'
+import { Check, X, Crown, Zap, Rocket, Building2 } from 'lucide-react'
 import { plans } from '../lib/plans'
 
 export default function PlanCard({ plan, isPopular = false, onSelect }) {
@@ -69,7 +69,7 @@ export default function PlanCard({ plan, isPopular = false, onSelect }) {
         {planData.price === 0 ? (
           <button
             onClick={() => onSelect && onSelect(planData.id)}
-            className="w-full btn-outline group"
+            className="w-full btn-outline inline-flex items-center justify-center space-x-3 group"
           >
             <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             <span>Commencer gratuitement</span>
@@ -77,7 +77,7 @@ export default function PlanCard({ plan, isPopular = false, onSelect }) {
         ) : (
           <button
             onClick={() => onSelect && onSelect(planData.id)}
-            className={`w-full inline-flex items-center space-x-3 group ${
+            className={`w-full inline-flex items-center justify-center space-x-3 group ${
               isPopular ? 'btn-primary' : 'btn-outline'
             }`}
           >
@@ -88,6 +88,7 @@ export default function PlanCard({ plan, isPopular = false, onSelect }) {
               </>
             ) : (
               <>
+                <Building2 className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                 <span>Choisir {planData.name}</span>
               </>
             )}
