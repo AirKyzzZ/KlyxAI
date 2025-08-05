@@ -51,29 +51,39 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
       scrolled 
-        ? 'bg-black/80 backdrop-blur-md border-b border-gray-800/50' 
-        : 'bg-transparent'
+        ? 'px-4 py-2' 
+        : 'px-0 py-0'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-                    {/* Logo */}
+      <div className={`max-w-7xl mx-auto transition-all duration-500 ease-out ${
+        scrolled 
+          ? 'bg-black/90 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl shadow-black/20 mx-auto max-w-4xl' 
+          : 'bg-transparent'
+      }`}>
+        <div className={`flex justify-between items-center transition-all duration-500 ease-out ${
+          scrolled ? 'h-16 px-6' : 'h-20 px-4 sm:px-6 lg:px-8'
+        }`}>
+          {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3 group">
-                             <Image 
-                 src="/images/black_transparent.png" 
-                 alt="Klyx AI" 
-                 width={56} 
-                 height={56} 
-                 className="w-14 h-14 group-hover:scale-110 transition-transform duration-300"
-               />
+              <Image 
+                src="/images/black_transparent.png" 
+                alt="Klyx AI" 
+                width={56} 
+                height={56} 
+                className={`group-hover:scale-110 transition-all duration-300 ${
+                  scrolled ? 'w-10 h-10' : 'w-14 h-14'
+                }`}
+              />
             </Link>
           </div>
 
           {/* Navigation desktop */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className={`flex items-baseline space-x-8 transition-all duration-500 ease-out ${
+              scrolled ? 'ml-6 space-x-6' : 'ml-10 space-x-8'
+            }`}>
               <Link href="/" className="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5">
                 Accueil
               </Link>
@@ -92,10 +102,14 @@ export default function Navbar() {
           {/* Actions utilisateur */}
           <div className="hidden md:block">
             {!isLoading && (
-              <div className="flex items-center space-x-4">
+              <div className={`flex items-center space-x-4 transition-all duration-500 ease-out ${
+                scrolled ? 'space-x-3' : 'space-x-4'
+              }`}>
                 {user ? (
                   <>
-                    <Link href="/dashboard" className="btn-primary">
+                    <Link href="/dashboard" className={`btn-primary transition-all duration-300 ${
+                      scrolled ? 'px-4 py-2 text-sm' : 'px-6 py-2'
+                    }`}>
                       Tableau de bord
                     </Link>
                     <button
@@ -111,7 +125,9 @@ export default function Navbar() {
                     <Link href="/login" className="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5">
                       Connexion
                     </Link>
-                    <Link href="/login?signup=true" className="btn-primary">
+                    <Link href="/login?signup=true" className={`btn-primary transition-all duration-300 ${
+                      scrolled ? 'px-4 py-2 text-sm' : 'px-6 py-2'
+                    }`}>
                       Commencer gratuitement
                     </Link>
                   </>
@@ -135,7 +151,11 @@ export default function Navbar() {
       {/* Menu mobile ouvert */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-4 pt-2 pb-6 space-y-2 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
+          <div className={`px-4 pt-2 pb-6 space-y-2 transition-all duration-500 ease-out ${
+            scrolled 
+              ? 'bg-black/95 backdrop-blur-xl rounded-b-2xl border border-white/10 shadow-2xl shadow-black/20 mx-4' 
+              : 'bg-black/95 backdrop-blur-md border-t border-gray-800/50'
+          }`}>
             <Link href="/" className="text-gray-300 hover:text-primary-400 block px-3 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-white/5">
               Accueil
             </Link>
