@@ -80,7 +80,7 @@ export default function Navbar() {
           </div>
 
           {/* Navigation desktop */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className={`flex items-baseline space-x-8 transition-all duration-500 ease-out ${
               scrolled ? 'ml-6 space-x-6' : 'ml-10 space-x-8'
             }`}>
@@ -102,14 +102,11 @@ export default function Navbar() {
               <Link href="/blog" className="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5">
                 Blog
               </Link>
-              <Link href="/guide" className="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5">
-                Guide
-              </Link>
             </div>
           </div>
 
           {/* Actions utilisateur */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             {!isLoading && (
               <div className={`flex items-center space-x-4 transition-all duration-500 ease-out ${
                 scrolled ? 'space-x-3' : 'space-x-4'
@@ -146,7 +143,7 @@ export default function Navbar() {
           </div>
 
           {/* Menu mobile */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-300 hover:text-primary-400 p-2 rounded-lg transition-all duration-300 hover:bg-white/5"
@@ -159,7 +156,7 @@ export default function Navbar() {
 
       {/* Menu mobile ouvert */}
       {isMenuOpen && (
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <div className={`px-4 pt-2 pb-6 space-y-2 transition-all duration-500 ease-out ${
             scrolled 
               ? 'bg-black/95 backdrop-blur-xl rounded-b-2xl border border-white/10 shadow-2xl shadow-black/20 mx-4' 
@@ -182,9 +179,6 @@ export default function Navbar() {
             </Link>
             <Link href="/blog" className="text-gray-300 hover:text-primary-400 block px-3 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-white/5">
               Blog
-            </Link>
-            <Link href="/guide" className="text-gray-300 hover:text-primary-400 block px-3 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-white/5">
-              Guide
             </Link>
             
             {!isLoading && (
