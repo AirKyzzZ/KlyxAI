@@ -31,7 +31,7 @@ export default function Privacy() {
               <h2 className="text-2xl font-bold text-white mb-6">Informations sur l'entreprise</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Klyx Studio</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">Klyx</h3>
                   <p className="mb-2">30 Cours Henri Brunet</p>
                   <p className="mb-2">33000 Bordeaux, France</p>
                   <p className="mb-2">SIRET : 94157236400011</p>
@@ -53,7 +53,7 @@ export default function Privacy() {
                 <h2 className="text-3xl font-bold text-white mb-6">1. Introduction</h2>
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    Klyx Studio ("nous", "notre", "nos") s'engage à protéger votre vie privée et vos données personnelles. 
+                    Klyx ("nous", "notre", "nos") s'engage à protéger votre vie privée et vos données personnelles. 
                     Cette politique de confidentialité explique comment nous collectons, utilisons, stockons et protégeons vos informations 
                     lorsque vous utilisez notre service de création de sites web.
                   </p>
@@ -247,7 +247,7 @@ export default function Privacy() {
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-3">Klyx Studio</h3>
+                      <h3 className="text-lg font-semibold text-white mb-3">Klyx</h3>
                       <p className="text-gray-300 mb-2">30 Cours Henri Brunet</p>
                       <p className="text-gray-300 mb-2">33000 Bordeaux, France</p>
                       <p className="text-gray-300 mb-2">Email : <a href="mailto:contact@klyx.fr" className="text-primary-400 hover:text-primary-300">contact@klyx.fr</a></p>

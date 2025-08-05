@@ -30,7 +30,7 @@ export default function Terms() {
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-6">Informations sur l'entreprise</h2>
               <div className="text-gray-300">
-                <p className="mb-2"><strong>Klyx Studio</strong></p>
+                <p className="mb-2"><strong>Klyx</strong></p>
                 <p className="mb-2">30 Cours Henri Brunet</p>
                 <p className="mb-2">33000 Bordeaux, France</p>
                 <p className="mb-2">SIRET : 94157236400011</p>
@@ -51,7 +51,7 @@ export default function Terms() {
                     veuillez ne pas utiliser le Service.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    Ces conditions constituent un accord légal entre vous et Klyx Studio concernant l'utilisation 
+                    Ces conditions constituent un accord légal entre vous et Klyx concernant l'utilisation 
                     de notre plateforme de création de sites web.
                   </p>
                 </div>
@@ -142,7 +142,7 @@ export default function Terms() {
                   <h3 className="text-xl font-semibold text-white mb-4">6.2 Notre propriété intellectuelle</h3>
                   <p className="text-gray-300 leading-relaxed mb-4">
                     Le Service, y compris son code, design et fonctionnalités, est protégé par les droits 
-                    d'auteur et autres lois sur la propriété intellectuelle. Ces droits appartiennent à Klyx Studio.
+                    d'auteur et autres lois sur la propriété intellectuelle. Ces droits appartiennent à Klyx.
                   </p>
                   
                   <h3 className="text-xl font-semibold text-white mb-4">6.3 Licences</h3>
@@ -218,7 +218,7 @@ export default function Terms() {
                 <h2 className="text-3xl font-bold text-white mb-6">10. Limitation de responsabilité</h2>
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    Dans toute la mesure permise par la loi, Klyx Studio ne sera pas responsable de :
+                    Dans toute la mesure permise par la loi, Klyx ne sera pas responsable de :
                   </p>
                   <ul className="text-gray-300 space-y-3">
                     <li>• Perte de données ou interruption de service</li>
@@ -293,7 +293,7 @@ export default function Terms() {
                     Pour toute question concernant ces conditions d'utilisation :
                   </p>
                   <div className="text-gray-300">
-                    <p className="mb-2"><strong>Klyx Studio</strong></p>
+                    <p className="mb-2"><strong>Klyx</strong></p>
                     <p className="mb-2">30 Cours Henri Brunet</p>
                     <p className="mb-2">33000 Bordeaux, France</p>
                     <p className="mb-2">Email : <a href="mailto:contact@klyx.fr" className="text-primary-400 hover:text-primary-300">contact@klyx.fr</a></p>

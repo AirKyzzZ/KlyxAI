@@ -103,7 +103,7 @@ export default function RGPD() {
               <h2 className="text-2xl font-bold text-white mb-6">Informations sur l'entreprise</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-3">Klyx Studio</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">Klyx</h3>
                   <p className="mb-2">30 Cours Henri Brunet</p>
                   <p className="mb-2">33000 Bordeaux, France</p>
                   <p className="mb-2">SIRET : 94157236400011</p>
