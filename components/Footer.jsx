@@ -9,19 +9,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Logo et description */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">K</span>
-              </div>
-              <div className="flex flex-col">
-                <Image 
-                  src="/images/white_transparent.png" 
-                  alt="Klyx AI" 
-                  width={120} 
-                  height={40} 
-                  className="h-8 w-auto"
-                />
-              </div>
+                        <div className="flex items-center space-x-3 mb-6">
+                             <Image 
+                 src="/images/black_transparent.png" 
+                 alt="Klyx AI" 
+                 width={56} 
+                 height={56} 
+                 className="w-14 h-14"
+               />
             </div>
             <p className="text-gray-300 mb-8 max-w-md leading-relaxed">
               Créez votre site web professionnel en 30 secondes grâce à l'IA. 

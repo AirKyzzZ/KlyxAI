@@ -58,23 +58,16 @@ export default function Navbar() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
+                    {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative w-10 h-10 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary-600/25">
-                <span className="text-white font-bold text-lg">K</span>
-              </div>
-              <div className="flex flex-col">
-                <div className="flex items-center space-x-2">
-                  <Image 
-                    src="/images/white_transparent.png" 
-                    alt="Klyx AI" 
-                    width={120} 
-                    height={40} 
-                    className="h-8 w-auto group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </div>
+                             <Image 
+                 src="/images/black_transparent.png" 
+                 alt="Klyx AI" 
+                 width={56} 
+                 height={56} 
+                 className="w-14 h-14 group-hover:scale-110 transition-transform duration-300"
+               />
             </Link>
           </div>
 
