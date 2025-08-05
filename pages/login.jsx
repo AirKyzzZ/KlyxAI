@@ -125,19 +125,14 @@ export default function Login() {
 
         <div className="flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 pt-32">
           <div className="max-w-md w-full space-y-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-2xl flex items-center justify-center">
-                  <span className="text-white font-bold text-2xl">K</span>
-                </div>
-              </div>
-              <div className="mb-6">
+                         <div className="text-center">
+               <div className="mb-6">
                 <Image 
-                  src="/images/white_transparent.png" 
+                  src="/images/black_transparent.png" 
                   alt="Klyx AI" 
-                  width={120} 
-                  height={40} 
-                  className="h-8 w-auto mx-auto mb-4"
+                  width={56} 
+                  height={56} 
+                  className="w-14 h-14 mx-auto mb-4"
                 />
               </div>
               <h2 className="text-3xl font-bold text-white">
