@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { ArrowRight, Zap, Palette, Globe, Users, Shield, Clock, Sparkles, CheckCircle, Star, Rocket, Target, Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react'
@@ -19,6 +19,17 @@ export default function Home() {
   const featuresRef = useRef(null)
   const statsRef = useRef(null)
   const processRef = useRef(null)
+  
+  // Contact form state
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error' | null
 
   useEffect(() => {
     // Hero animations
@@ -89,6 +100,55 @@ export default function Home() {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
     }
   }, [])
+
+  // Handle form input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const response = await fetch('https://formspree.io/f/mgvznpkd', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        })
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          subject: '',
+          message: ''
+        })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <SmoothScroll>
@@ -440,22 +500,43 @@ export default function Home() {
               <div className="card-hover p-8">
                 <h3 className="text-2xl font-bold text-white mb-6">Envoyez-nous un message</h3>
                 
-                <form className="space-y-6">
+                {/* Success/Error messages */}
+                {submitStatus === 'success' && (
+                  <div className="mb-6 p-4 bg-green-600/20 border border-green-600/30 rounded-lg">
+                    <p className="text-green-400 font-medium">Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.</p>
+                  </div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <div className="mb-6 p-4 bg-red-600/20 border border-red-600/30 rounded-lg">
+                    <p className="text-red-400 font-medium">Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.</p>
+                  </div>
+                )}
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Prénom</label>
                       <input 
                         type="text" 
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
                         className="input-field"
                         placeholder="Votre prénom"
+                        required
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Nom</label>
                       <input 
                         type="text" 
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
                         className="input-field"
                         placeholder="Votre nom"
+                        required
                       />
                     </div>
                   </div>
@@ -464,14 +545,24 @@ export default function Home() {
                     <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
                     <input 
                       type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       className="input-field"
                       placeholder="votre@email.com"
+                      required
                     />
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Sujet</label>
-                    <select className="input-field">
+                    <select 
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      className="input-field"
+                      required
+                    >
                       <option value="">Choisissez un sujet</option>
                       <option value="devis">Demande de devis</option>
                       <option value="support">Support technique</option>
@@ -483,13 +574,21 @@ export default function Home() {
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                     <textarea 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
                       className="input-field h-32 resize-none"
                       placeholder="Décrivez votre projet..."
+                      required
                     ></textarea>
                   </div>
                   
-                  <button type="submit" className="btn-primary w-full text-lg py-4">
-                    Envoyer le message
+                  <button 
+                    type="submit" 
+                    disabled={isSubmitting}
+                    className={`btn-primary w-full text-lg py-4 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  >
+                    {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                   </button>
                 </form>
               </div>
