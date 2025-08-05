@@ -96,6 +96,9 @@ export default function Navbar() {
               <Link href="/#contact" className="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5">
                 Contact
               </Link>
+              <Link href="/blog" className="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5">
+                Blog
+              </Link>
             </div>
           </div>
 
@@ -167,6 +170,9 @@ export default function Navbar() {
             </Link>
             <Link href="/#contact" className="text-gray-300 hover:text-primary-400 block px-3 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-white/5">
               Contact
+            </Link>
+            <Link href="/blog" className="text-gray-300 hover:text-primary-400 block px-3 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-white/5">
+              Blog
             </Link>
             
             {!isLoading && (

@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://klyx.ai/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /dashboard
+Disallow: /api
+Disallow: /_next/
+Disallow: /static/
+
+# Allow blog and public pages
+Allow: /blog
+Allow: /docs
+Allow: /help
+Allow: /privacy
+Allow: /terms
+Allow: /cookies
+Allow: /rgpd 
