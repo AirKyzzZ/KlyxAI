@@ -519,14 +519,15 @@ export default function Blog() {
             {/* Featured Article */}
             {articles.filter(article => article.featured).map(article => (
               <div key={article.id} className="mb-16">
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-                  <div className="flex items-center space-x-4 mb-4">
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 lg:p-8 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-4">
                     <span className="bg-primary-400/20 text-primary-400 px-3 py-1 rounded-full text-sm font-medium">
                       Article à la une
                     </span>
                     <div className="flex items-center space-x-2 text-gray-400 text-sm">
                       <Calendar className="w-4 h-4" />
-                      <span>{formatDate(article.publishDate)}</span>
+                      <span className="hidden sm:inline">{formatDate(article.publishDate)}</span>
+                      <span className="sm:hidden">{new Date(article.publishDate).toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit', year: 'numeric' })}</span>
                     </div>
                     <div className="flex items-center space-x-2 text-gray-400 text-sm">
                       <Clock className="w-4 h-4" />
@@ -534,21 +535,21 @@ export default function Blog() {
                     </div>
                   </div>
                   
-                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-4">
                     {article.title}
                   </h2>
                   
-                  <p className="text-gray-300 text-lg mb-6">
+                  <p className="text-gray-300 text-base sm:text-lg mb-6">
                     {article.excerpt}
                   </p>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                       <div className="flex items-center space-x-2 text-gray-400">
                         <User className="w-4 h-4" />
                         <span className="text-sm">{article.author}</span>
                       </div>
-                      <div className="flex items-center space-x-2">
+                      <div className="flex flex-wrap items-center gap-2">
                         {article.tags.map((tag, index) => (
                           <span key={index} className="bg-gray-700/50 text-gray-300 px-2 py-1 rounded text-xs">
                             {tag}
@@ -559,7 +560,7 @@ export default function Blog() {
                     
                     <Link 
                       href={`/blog/${article.slug}`}
-                      className="btn-primary flex items-center space-x-2"
+                      className="btn-primary flex items-center justify-center sm:justify-start space-x-2 w-full sm:w-auto"
                     >
                       <span>Lire l'article</span>
                       <ArrowRight className="w-4 h-4" />
