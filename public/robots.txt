@@ -2,13 +2,20 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://klyx.ai/sitemap.xml
+Sitemap: https://ai.klyx.fr/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /dashboard
 Disallow: /api
 Disallow: /_next/
 Disallow: /static/
+Disallow: /admin
+Disallow: /private
+Disallow: /temp
+Disallow: /test
 
 # Allow blog and public pages
 Allow: /blog
@@ -17,4 +24,30 @@ Allow: /help
 Allow: /privacy
 Allow: /terms
 Allow: /cookies
-Allow: /rgpd 
+Allow: /rgpd
+Allow: /about
+Allow: /builder
+Allow: /guide
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: / 

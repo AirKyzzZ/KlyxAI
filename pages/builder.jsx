@@ -102,8 +102,38 @@ export default function Builder() {
   return (
     <>
       <Head>
-        <title>Créer un site web - Klyx AI</title>
-        <meta name="description" content="Créez votre site web professionnel avec l'IA" />
+        <title>Klyx IA - Générateur de Sites Web | Création Site IA Professionnel</title>
+        <meta name="description" content="Utilisez Klyx IA pour créer votre site web professionnel en 30 secondes. Générateur de sites web alimenté par l'intelligence artificielle. Solution française pour TPE/PME, indépendants et agences." />
+        <meta name="keywords" content="Klyx IA, Klyx AI, création site IA, générateur site web IA, intelligence artificielle, développement web, site web professionnel, TPE PME, indépendants, agences, hébergement web, design web, SEO, optimisation web, générateur site web français" />
+        <meta name="author" content="Klyx.fr" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="canonical" href="https://ai.klyx.fr/builder" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Klyx IA - Générateur de Sites Web | Création Site IA Professionnel" />
+        <meta property="og:description" content="Utilisez Klyx IA pour créer votre site web professionnel en 30 secondes. Générateur de sites web alimenté par l'intelligence artificielle." />
+        <meta property="og:url" content="https://ai.klyx.fr/builder" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Klyx AI" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:image" content="https://ai.klyx.fr/images/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Klyx IA - Générateur de sites web avec l'IA" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@klyx_fr" />
+        <meta name="twitter:creator" content="@klyx_fr" />
+        <meta name="twitter:title" content="Klyx IA - Générateur de Sites Web | Création Site IA Professionnel" />
+        <meta name="twitter:description" content="Utilisez Klyx IA pour créer votre site web professionnel en 30 secondes." />
+        <meta name="twitter:image" content="https://ai.klyx.fr/images/twitter-card.png" />
+        
+        {/* Additional SEO */}
+        <meta name="geo.region" content="FR" />
+        <meta name="geo.placename" content="France" />
+        <meta name="language" content="fr" />
       </Head>
 
       <div className="min-h-screen">

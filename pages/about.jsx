@@ -28,10 +28,38 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>À propos - Klyx AI | Création de sites web intelligents</title>
-        <meta name="description" content="Découvrez Klyx AI, la plateforme révolutionnaire qui démocratise la création de sites web pour les entreprises physiques grâce à l'intelligence artificielle." />
-        <meta name="keywords" content="Klyx AI, création site web, intelligence artificielle, entreprise physique, développement web, IA" />
-        <link rel="canonical" href="https://klyxai.com/about" />
+        <title>Klyx IA - À propos | Création Site IA et Générateur de Sites Web Professionnels</title>
+        <meta name="description" content="Découvrez Klyx IA, la plateforme française révolutionnaire de création de sites web IA. Générateur de sites web professionnels alimenté par l'intelligence artificielle pour TPE/PME, indépendants et agences." />
+        <meta name="keywords" content="Klyx IA, Klyx AI, création site IA, générateur site web IA, intelligence artificielle, développement web, site web professionnel, TPE PME, indépendants, agences, hébergement web, design web, SEO, optimisation web, générateur site web français" />
+        <meta name="author" content="Klyx.fr" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
+        <link rel="canonical" href="https://ai.klyx.fr/about" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Klyx IA - À propos | Création Site IA et Générateur de Sites Web Professionnels" />
+        <meta property="og:description" content="Découvrez Klyx IA, la plateforme française révolutionnaire de création de sites web IA. Générateur de sites web professionnels alimenté par l'intelligence artificielle." />
+        <meta property="og:url" content="https://ai.klyx.fr/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Klyx AI" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:image" content="https://ai.klyx.fr/images/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Klyx IA - À propos de la création de sites web avec l'IA" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@klyx_fr" />
+        <meta name="twitter:creator" content="@klyx_fr" />
+        <meta name="twitter:title" content="Klyx IA - À propos | Création Site IA et Générateur de Sites Web Professionnels" />
+        <meta name="twitter:description" content="Découvrez Klyx IA, la plateforme française révolutionnaire de création de sites web IA." />
+        <meta name="twitter:image" content="https://ai.klyx.fr/images/twitter-card.png" />
+        
+        {/* Additional SEO */}
+        <meta name="geo.region" content="FR" />
+        <meta name="geo.placename" content="France" />
+        <meta name="language" content="fr" />
       </Head>
 
       <div className="min-h-screen bg-black">
@@ -42,9 +70,9 @@ export default function About() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h1 className="text-5xl md:text-7xl font-bold mb-8">
-                <span className="gradient-text">À propos</span>
+                <span className="gradient-text">Klyx IA</span>
                 <br />
-                <span className="text-white">de Klyx AI</span>
+                <span className="text-white">Création Site IA</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Nous révolutionnons la création de sites web pour les entreprises physiques 

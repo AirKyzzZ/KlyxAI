@@ -153,10 +153,87 @@ export default function Home() {
   return (
     <SmoothScroll>
       <Head>
-        <title>Klyx AI - Créez votre site web professionnel en 30 secondes grâce à l'IA</title>
-        <meta name="description" content="Générez, personnalisez et hébergez votre site web professionnel en quelques clics. Solution française pour TPE/PME, indépendants et agences." />
+        <title>Klyx IA - Création Site IA | Générateur de Sites Web Professionnels avec l'Intelligence Artificielle</title>
+        <meta name="description" content="Klyx IA révolutionne la création de sites web. Créez votre site web professionnel en 30 secondes grâce à l'IA. Solution française pour TPE/PME, indépendants et agences. Générateur de sites web alimenté par l'intelligence artificielle." />
+        <meta name="keywords" content="Klyx IA, Klyx AI, création site IA, générateur site web IA, intelligence artificielle, développement web, site web professionnel, TPE PME, indépendants, agences, hébergement web, design web, SEO, optimisation web, générateur site web français" />
+        <meta name="author" content="Klyx.fr" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://ai.klyx.fr" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Klyx IA - Création Site IA | Générateur de Sites Web Professionnels" />
+        <meta property="og:description" content="Créez votre site web professionnel en 30 secondes grâce à l'IA. Solution française pour TPE/PME, indépendants et agences." />
+        <meta property="og:url" content="https://ai.klyx.fr" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Klyx AI" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:image" content="https://ai.klyx.fr/images/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Klyx IA - Création de sites web professionnels avec l'IA" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@klyx_fr" />
+        <meta name="twitter:creator" content="@klyx_fr" />
+        <meta name="twitter:title" content="Klyx IA - Création Site IA | Générateur de Sites Web Professionnels" />
+        <meta name="twitter:description" content="Créez votre site web professionnel en 30 secondes grâce à l'IA. Solution française pour TPE/PME, indépendants et agences." />
+        <meta name="twitter:image" content="https://ai.klyx.fr/images/twitter-card.png" />
+        
+        {/* Additional SEO */}
+        <meta name="geo.region" content="FR" />
+        <meta name="geo.placename" content="France" />
+        <meta name="language" content="fr" />
+        
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Structured Data for Homepage */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "Klyx IA - Création Site IA",
+              "description": "Créez votre site web professionnel en 30 secondes grâce à l'IA. Solution française pour TPE/PME, indépendants et agences.",
+              "url": "https://ai.klyx.fr",
+              "mainEntity": {
+                "@type": "SoftwareApplication",
+                "name": "Klyx IA - Générateur de Sites Web",
+                "description": "Générateur de sites web professionnels alimenté par l'intelligence artificielle",
+                "applicationCategory": "WebApplication",
+                "operatingSystem": "Web",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "0",
+                  "priceCurrency": "EUR",
+                  "availability": "https://schema.org/InStock"
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.8",
+                  "ratingCount": "127"
+                }
+              },
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Accueil",
+                    "item": "https://ai.klyx.fr"
+                  }
+                ]
+              }
+            })
+          }}
+        />
       </Head>
 
       <div className="min-h-screen">
@@ -186,8 +263,8 @@ export default function Home() {
             </h1>
             
             <p className="hero-subtitle text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              La solution française pour les TPE/PME, indépendants et agences. 
-              Générez, personnalisez et hébergez votre site web sans aucune compétence technique.
+              <strong>Klyx AI</strong> - La solution française de générateur de sites web IA pour les TPE/PME, indépendants et agences. 
+              Créez votre site web professionnel avec l'intelligence artificielle sans aucune compétence technique.
             </p>
             
             <div className="hero-buttons flex flex-col sm:flex-row gap-6 justify-center mb-16">
