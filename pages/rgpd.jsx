@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { Shield, User, Database, Eye, Download, Trash2, Edit, Lock } from 'lucide-react'
+import Link from 'next/link'
+import { Shield, Lock, Eye, Database, Users, FileText, AlertTriangle, CheckCircle } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -15,28 +16,28 @@ export default function RGPD() {
     {
       title: "Droit de rectification",
       description: "Corriger des données inexactes",
-      icon: Edit,
+      icon: Lock,
       color: "text-green-400",
       bgColor: "bg-green-400/10"
     },
     {
       title: "Droit à l'effacement",
       description: "Demander la suppression de vos données",
-      icon: Trash2,
+      icon: AlertTriangle,
       color: "text-red-400",
       bgColor: "bg-red-400/10"
     },
     {
       title: "Droit à la portabilité",
       description: "Récupérer vos données dans un format structuré",
-      icon: Download,
+      icon: FileText,
       color: "text-purple-400",
       bgColor: "bg-purple-400/10"
     },
     {
       title: "Droit d'opposition",
       description: "Vous opposer au traitement de vos données",
-      icon: User,
+      icon: Users,
       color: "text-orange-400",
       bgColor: "bg-orange-400/10"
     },
@@ -164,24 +165,24 @@ export default function RGPD() {
                     <p className="text-gray-300 mb-4">
                       Envoyez votre demande à notre délégué à la protection des données :
                     </p>
-                    <a 
+                    <Link 
                       href="mailto:contact@klyx.fr" 
                       className="text-primary-400 hover:text-primary-300 font-medium"
                     >
                       contact@klyx.fr
-                    </a>
+                    </Link>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Par téléphone</h3>
                     <p className="text-gray-300 mb-4">
                       Appelez-nous pour toute question concernant vos droits :
                     </p>
-                    <a 
+                    <Link 
                       href="tel:+33783972360" 
                       className="text-primary-400 hover:text-primary-300 font-medium"
                     >
                       07 83 97 23 60
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="mt-6 p-4 bg-gray-800/50 rounded-lg">
@@ -310,26 +311,26 @@ export default function RGPD() {
                     <p className="text-gray-300 text-sm mb-2">
                       Essayez d'abord de résoudre le problème avec nous :
                     </p>
-                    <a 
+                    <Link 
                       href="mailto:contact@klyx.fr" 
                       className="text-primary-400 hover:text-primary-300 text-sm"
                     >
                       contact@klyx.fr
-                    </a>
+                    </Link>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-3">Porter plainte</h3>
                     <p className="text-gray-300 text-sm mb-2">
                       Vous pouvez porter plainte auprès de la CNIL :
                     </p>
-                    <a 
+                    <Link 
                       href="https://www.cnil.fr/fr/plaintes" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary-400 hover:text-primary-300 text-sm"
                     >
                       www.cnil.fr/fr/plaintes
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -354,18 +355,18 @@ export default function RGPD() {
                 concernant la protection de vos données personnelles.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <Link
                   href="mailto:contact@klyx.fr"
                   className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300"
                 >
                   <span>Contacter le DPO</span>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/privacy"
                   className="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300"
                 >
                   <span>Politique de confidentialité</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

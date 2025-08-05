@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -21,28 +21,7 @@ export default function SiteEditorPage() {
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
 
-  useEffect(() => {
-    if (siteId) {
-      checkAuth()
-    }
-  }, [siteId])
-
-  const checkAuth = async () => {
-    try {
-      const { user, error } = await getCurrentUser()
-      if (error || !user) {
-        router.push('/login')
-        return
-      }
-      setUser(user)
-      await loadSite()
-    } catch (error) {
-      console.error('Erreur lors de la vérification:', error)
-      router.push('/login')
-    }
-  }
-
-  const loadSite = async () => {
+  const loadSite = useCallback(async () => {
     try {
       const { data, error } = await getSiteById(siteId)
       if (error) {
@@ -63,7 +42,28 @@ export default function SiteEditorPage() {
     } finally {
       setIsLoading(false)
     }
-  }
+  }, [siteId])
+
+  const checkAuth = useCallback(async () => {
+    try {
+      const { user, error } = await getCurrentUser()
+      if (error || !user) {
+        router.push('/login')
+        return
+      }
+      setUser(user)
+      await loadSite()
+    } catch (error) {
+      console.error('Erreur lors de la vérification:', error)
+      router.push('/login')
+    }
+  }, [router, loadSite])
+
+  useEffect(() => {
+    if (siteId) {
+      checkAuth()
+    }
+  }, [siteId, checkAuth])
 
   const handleSave = async () => {
     if (!site) return

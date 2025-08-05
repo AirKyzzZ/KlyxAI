@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { BookOpen, Code, Zap, Users, Settings, FileText, ArrowRight, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowRight, ExternalLink, BookOpen, Code, Users, Zap, Shield, Globe } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -32,7 +33,7 @@ export default function Docs() {
     {
       title: 'Intégrations',
       description: 'Connectez vos outils préférés',
-      icon: Settings,
+      icon: Shield,
       color: 'text-orange-400',
       bgColor: 'bg-orange-400/10',
       link: '#integrations'
@@ -77,7 +78,7 @@ export default function Docs() {
                     className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
                   />
                   <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                    <FileText className="w-5 h-5 text-gray-400" />
+                    <Shield className="w-5 h-5 text-gray-400" />
                   </div>
                 </div>
               </div>
@@ -88,7 +89,7 @@ export default function Docs() {
               <h2 className="text-2xl font-semibold text-white mb-6">Liens rapides</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {quickLinks.map((link, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={link.href}
                     className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-white/10 transition-all duration-300 group"
@@ -99,7 +100,7 @@ export default function Docs() {
                       </span>
                       <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-primary-400 transition-colors duration-300" />
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -107,7 +108,7 @@ export default function Docs() {
             {/* Main Sections */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {sections.map((section, index) => (
-                <a
+                <Link
                   key={index}
                   href={section.link}
                   className="group"
@@ -131,7 +132,7 @@ export default function Docs() {
                       </div>
                     </div>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -169,13 +170,13 @@ export default function Docs() {
                   </div>
                 </div>
                 <div className="text-center mt-8">
-                  <a
+                  <Link
                     href="/builder"
                     className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300"
                   >
                     <span>Commencer maintenant</span>
                     <ArrowRight className="w-5 h-5" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -211,13 +212,13 @@ export default function Docs() {
                   </div>
                 </div>
                 <div className="text-center">
-                  <a
+                  <Link
                     href="/api"
                     className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-colors duration-300"
                   >
                     <span>Voir la documentation complète de l'API</span>
                     <ExternalLink className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -276,13 +277,13 @@ export default function Docs() {
                 Notre équipe est là pour vous aider. Contactez-nous ou consultez notre centre d'aide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <Link
                   href="/help"
                   className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300"
                 >
                   <span>Centre d'aide</span>
                   <ArrowRight className="w-5 h-5" />
-                </a>
+                </Link>
                 <a
                   href="mailto:contact@klyx.fr"
                   className="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300"

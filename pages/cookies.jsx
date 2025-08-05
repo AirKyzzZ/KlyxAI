@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import { Cookie, Settings, Shield, Eye, X } from 'lucide-react'
+import Link from 'next/link'
 import { useState } from 'react'
+import { Check, X, Settings, Shield, Eye, EyeOff } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -213,28 +214,24 @@ export default function Cookies() {
                     <p className="text-gray-300 text-sm mb-2">
                       Nous aide à comprendre comment vous utilisez notre site.
                     </p>
-                    <a 
-                      href="https://policies.google.com/privacy"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/privacy"
                       className="text-primary-400 hover:text-primary-300 text-sm"
                     >
                       Politique de confidentialité Google
-                    </a>
+                    </Link>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-3">Stripe</h3>
                     <p className="text-gray-300 text-sm mb-2">
                       Traite les paiements de manière sécurisée.
                     </p>
-                    <a 
-                      href="https://stripe.com/privacy"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/privacy"
                       className="text-primary-400 hover:text-primary-300 text-sm"
                     >
                       Politique de confidentialité Stripe
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -320,12 +317,12 @@ export default function Cookies() {
                 >
                   <span>Nous contacter</span>
                 </a>
-                <a
+                <Link
                   href="/privacy"
                   className="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300"
                 >
                   <span>Politique de confidentialité</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

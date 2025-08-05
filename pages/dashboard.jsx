@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -20,11 +20,7 @@ export default function Dashboard() {
     draftSites: 0
   })
 
-  useEffect(() => {
-    checkAuth()
-  }, [])
-
-  const checkAuth = async () => {
+  const checkAuth = useCallback(async () => {
     try {
       const { user, error } = await getCurrentUser()
       if (error || !user) {
@@ -38,7 +34,11 @@ export default function Dashboard() {
       console.error('Erreur lors de la vérification:', error)
       router.push('/login')
     }
-  }
+  }, [router])
+
+  useEffect(() => {
+    checkAuth()
+  }, [checkAuth])
 
   const loadUserData = async (userId) => {
     try {

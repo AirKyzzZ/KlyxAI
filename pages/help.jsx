@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import { Search, MessageCircle, Mail, Phone, FileText, HelpCircle, ArrowRight, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
 import { useState } from 'react'
+import { ArrowRight, Mail, MessageCircle, Phone, Clock, Search, BookOpen, Code, Users, Settings, FileText, HelpCircle, ExternalLink } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -204,7 +205,7 @@ export default function Help() {
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8">Actions rapides</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <a
+                <Link
                   href="/builder"
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group"
                 >
@@ -215,8 +216,8 @@ export default function Help() {
                   <p className="text-gray-300 text-sm">
                     Commencez à créer votre site web en quelques minutes
                   </p>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/dashboard"
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group"
                 >
@@ -227,8 +228,8 @@ export default function Help() {
                   <p className="text-gray-300 text-sm">
                     Accédez à votre dashboard pour gérer tous vos sites
                   </p>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/status"
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group"
                 >
@@ -239,7 +240,7 @@ export default function Help() {
                   <p className="text-gray-300 text-sm">
                     Vérifiez l'état de nos services en temps réel
                   </p>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -280,26 +281,26 @@ export default function Help() {
                   <p className="text-gray-300 mb-6">
                     Guides détaillés, tutoriels vidéo et références techniques pour maîtriser Klyx.
                   </p>
-                  <a
+                  <Link
                     href="/docs"
                     className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-colors duration-300"
                   >
                     <span>Accéder à la documentation</span>
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
                   <h3 className="text-xl font-semibold text-white mb-4">API Reference</h3>
                   <p className="text-gray-300 mb-6">
                     Intégrez Klyx dans vos applications avec notre API REST complète.
                   </p>
-                  <a
+                  <Link
                     href="/api"
                     className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-colors duration-300"
                   >
                     <span>Voir l'API</span>
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

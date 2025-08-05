@@ -1,4 +1,5 @@
-import { Star, Quote, Heart, Users, Award, ArrowRight } from 'lucide-react'
+import { Star, Quote, ArrowRight, Users, Heart, Award } from 'lucide-react'
+import Link from 'next/link'
 
 const testimonials = [
   {
@@ -111,7 +112,7 @@ export default function SocialProof() {
 
               {/* Lien vers le site */}
               <div className="pt-6 border-t border-gray-800/50">
-                <a 
+                <Link 
                   href={testimonial.siteUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -119,7 +120,7 @@ export default function SocialProof() {
                 >
                   <span>Voir leur site</span>
                   <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -134,13 +135,13 @@ export default function SocialProof() {
             <p className="text-gray-300 mb-8">
               Créez votre site web professionnel en quelques minutes
             </p>
-            <a 
+            <Link 
               href="/login?signup=true" 
               className="btn-primary text-lg px-10 py-5 inline-flex items-center space-x-3 group"
             >
               <Star className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
               <span>Commencer gratuitement</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -16,11 +16,7 @@ export default function Builder() {
   const [generatedSite, setGeneratedSite] = useState(null)
   const [previewMode, setPreviewMode] = useState(false)
 
-  useEffect(() => {
-    checkAuth()
-  }, [])
-
-  const checkAuth = async () => {
+  const checkAuth = useCallback(async () => {
     try {
       const { user, error } = await getCurrentUser()
       if (error || !user) {
@@ -32,7 +28,11 @@ export default function Builder() {
       console.error('Erreur lors de la vérification:', error)
       router.push('/login')
     }
-  }
+  }, [router])
+
+  useEffect(() => {
+    checkAuth()
+  }, [checkAuth])
 
   const handleSiteGeneration = async (formData) => {
     setIsLoading(true)

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { Code, Key, Database, Zap, Copy, Check, ExternalLink } from 'lucide-react'
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
@@ -162,13 +163,13 @@ export default function Api() {
                 Créez, gérez et déployez des sites web programmatiquement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <Link
                   href="#authentication"
                   className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300"
                 >
                   <Key className="w-5 h-5" />
                   <span>Authentification</span>
-                </a>
+                </Link>
                 <a
                   href="https://github.com/klyx/api-examples"
                   target="_blank"
@@ -228,13 +229,13 @@ export default function Api() {
                         </button>
                       </div>
                     </div>
-                    <a
+                    <Link
                       href="/dashboard"
                       className="inline-flex items-center space-x-2 text-primary-400 hover:text-primary-300 transition-colors duration-300"
                     >
                       <span>Générer une clé API</span>
                       <ExternalLink className="w-4 h-4" />
-                    </a>
+                    </Link>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Exemple cURL</h3>
@@ -384,13 +385,13 @@ export default function Api() {
                 Notre équipe technique est là pour vous aider avec l'intégration de l'API.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <Link
                   href="/docs"
                   className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300"
                 >
                   <span>Documentation complète</span>
                   <ExternalLink className="w-5 h-5" />
-                </a>
+                </Link>
                 <a
                   href="mailto:contact@klyx.fr"
                   className="inline-flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300"

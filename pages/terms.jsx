@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { FileText, Shield, AlertTriangle, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
+import { Shield, Users, CreditCard, FileText, AlertTriangle, CheckCircle } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -204,7 +205,7 @@ export default function Terms() {
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                   <p className="text-gray-300 leading-relaxed mb-4">
                     La collecte et l'utilisation de vos données personnelles sont régies par notre 
-                    <a href="/privacy" className="text-primary-400 hover:text-primary-300"> Politique de confidentialité</a>. 
+                    <Link href="/privacy" className="text-primary-400 hover:text-primary-300"> Politique de confidentialité</Link>. 
                     En utilisant le Service, vous acceptez cette politique.
                   </p>
                   <p className="text-gray-300 leading-relaxed">
