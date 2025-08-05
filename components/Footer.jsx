@@ -153,6 +153,9 @@ export default function Footer() {
               <Link href="/cookies" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-300">
                 Cookies
               </Link>
+              <Link href="/rgpd" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-300">
+                RGPD
+              </Link>
             </div>
           </div>
         </div>
