@@ -28,7 +28,7 @@ export default function Docs() {
       icon: BookOpen,
       color: 'text-purple-400',
       bgColor: 'bg-purple-400/10',
-      link: '#guides'
+      link: '/guide'
     },
     {
       title: 'Intégrations',
@@ -42,6 +42,7 @@ export default function Docs() {
 
   const quickLinks = [
     { name: 'Créer un site', href: '/builder' },
+    { name: 'Guide d\'utilisation', href: '/guide' },
     { name: 'Dashboard', href: '/dashboard' },
     { name: 'Statut des services', href: '/status' },
     { name: 'Support', href: '/help' }
@@ -226,6 +227,19 @@ export default function Docs() {
             {/* Guides Section */}
             <div id="guides" className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8">Guides et tutoriels</h2>
+              <div className="text-center mb-8">
+                <p className="text-gray-300 mb-6">
+                  Consultez notre guide complet pour apprendre à utiliser Klyx efficacement
+                </p>
+                <Link
+                  href="/guide"
+                  className="inline-flex items-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300"
+                >
+                  <BookOpen className="w-5 h-5" />
+                  <span>Voir le guide complet</span>
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                   <h3 className="text-xl font-semibold text-white mb-3">Créer votre premier site</h3>
